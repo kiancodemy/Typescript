@@ -9,15 +9,15 @@ interface list {
 }
 
 export default function Todoslist({ todos, settodos }: list) {
-  return (
-    <div className="todo">
-      {todos.map((todo) => (
-        <Singletodo
-          key={todo.id.toString()}
-          todos={todos}
-          settodos={settodos}
-        ></Singletodo>
-      ))}
-    </div>
-  );
+  let final = todos.map((todo) => {
+    return (
+      <Singletodo
+        key={todo.id.toString()}
+        todo={todo}
+        todos={todos}
+        settodos={settodos}
+      />
+    );
+  });
+  return <div className="todo">{final}</div>;
 }

@@ -50,3 +50,9 @@ body {
 .input-submit:hover {
   scale: 1.2;
 }
+.todo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: "90%";
+}

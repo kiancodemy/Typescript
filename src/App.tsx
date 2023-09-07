@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Input from "./component/input";
-
+import Todoslist from "./component/Todoslist";
 import "./App.css";
 import Todo from "./component/modal";
 
@@ -11,6 +11,7 @@ const App: React.FC = () => {
     e.preventDefault();
     if (todo) {
       settodos([...todos, { id: Date.now(), todo: todo, isdone: false }]);
+
       settodo("");
     }
   };
@@ -18,6 +19,7 @@ const App: React.FC = () => {
     <div className="App">
       <span className="heading">taskify</span>
       <Input handleAdd={handleAdd} todo={todo} settodo={settodo} />
+      <Todoslist todos={todos} settodos={settodos}></Todoslist>
     </div>
   );
 };

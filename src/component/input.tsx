@@ -1,9 +1,22 @@
 import React from "react";
 import "./input.css";
-const input: React.FC = () => {
+interface prop {
+  todo: string;
+  settodo: React.Dispatch<React.SetStateAction<string>>;
+  handleAdd: (e: React.FormEvent) => void;
+}
+const input = ({ todo, settodo, handleAdd }: prop) => {
   return (
     <form className="input">
-      <input type="text" placeholder="Enter a task" className="input-box" />
+      <input
+        type="text"
+        value={todo}
+        onChange={(e) => {
+          settodo(e.target.value);
+        }}
+        placeholder="Enter a task"
+        className="input-box"
+      />
       <button className="input-submit">Go</button>
     </form>
   );

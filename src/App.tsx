@@ -17,7 +17,7 @@ const App: React.FC = () => {
   };
   return (
     <div className="App">
-      <span className="heading">taskify</span>
+      <span className="heading">kian project</span>
       <Input handleAdd={handleAdd} todo={todo} settodo={settodo} />
       <Todoslist todos={todos} settodos={settodos}></Todoslist>
     </div>

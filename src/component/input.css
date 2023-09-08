@@ -61,21 +61,26 @@ body {
   display: flex;
   flex-basis: 40%;
   border: 1px solid black;
-  box-shadow: 0 0 1px 3px rgba(0, 0, 0, 0.2);
-  border-radius: 50px;
+  box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  border: none;
   margin-top: 20px;
   flex-shrink: 1;
+  background-color: #ffc300;
 
   justify-content: right;
   transition: 0.5s all;
 }
 .sing-from:hover {
-  box-shadow: 0 1px 3px 6px #1a3758;
+  box-shadow: 0 0 5px 5px #e2c45f;
 }
 .single-text {
   font-size: 20px;
   text-align: left;
   margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .icon-container {
   display: flex;
@@ -88,5 +93,5 @@ body {
   transition: 0.3s;
 }
 .icon:hover {
-  transform: scale(1.4);
+  transform: scale(1.3);
 }

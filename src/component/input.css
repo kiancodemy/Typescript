@@ -6,7 +6,7 @@ body {
 .input {
   display: flex;
   flex-direction: row;
-  border-radius: 50px;
+  border-radius: 20px;
   padding: 5px 10px;
   overflow: hidden;
   background-color: white;
@@ -35,9 +35,10 @@ body {
 }
 .input-submit {
   padding: 10px 10px;
-  font-size: 20px;
+  font-size: 15px;
 
   border-radius: 50px;
+
   transition: 0.5s;
 
   border: none;
@@ -57,9 +58,9 @@ body {
   width: 90%;
 }
 .sing-from {
-  padding: 10px 20px;
+  padding: 5px 10px;
   display: flex;
-  flex-basis: 40%;
+  flex-basis: 85%;
   border: 1px solid black;
   box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
@@ -104,4 +105,14 @@ body {
 }
 .edit:hover {
   box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.3);
+}
+@media only screen and (min-width: 900px) {
+  .sing-from {
+    padding: 10px 20px;
+    flex-basis: 40%;
+    margin-top: 20px;
+  }
+  .input-submit {
+    font-size: 20px;
+  }
 }

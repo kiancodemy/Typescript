@@ -10,7 +10,7 @@ interface lists {
 }
 
 export default function Singletodo({ todo, todos, settodos }: lists) {
-  const refe = useRef<HTMLInputElement>();
+  const refe = useRef<any>();
 
   const [edit, setedit] = useState<boolean>(false);
   const [edited, setedited] = useState<string>("");

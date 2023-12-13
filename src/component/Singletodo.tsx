@@ -22,7 +22,7 @@ export default function Singletodo({ todo, todos, settodos }: lists) {
   useEffect(() => {
     refe.current?.focus();
   }, [edit]);
-  const handlesubmit = (e: React.FormEvent, id: number) => {
+  const handlesubmit = (e: React.FormEvent, id: Number) => {
     e.preventDefault();
     const edit = todos.map((element) =>
       element.id === id ? { ...todo, todo: edited } : todo
@@ -31,13 +31,13 @@ export default function Singletodo({ todo, todos, settodos }: lists) {
     setedit(false);
   };
 
-  const handledone = (id: number) => {
+  const handledone = (id: Number) => {
     const map = todos.map((element) =>
       element.id === id ? { ...todo, isdone: !element.isdone } : todo
     );
     settodos(map);
   };
-  const handledelete = (id: number) => {
+  const handledelete = (id: Number) => {
     const filtered = todos.filter((element) => element.id !== id);
     settodos(filtered);
   };

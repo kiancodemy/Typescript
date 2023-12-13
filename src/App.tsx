@@ -6,6 +6,7 @@ import Todo from "./component/modal";
 
 const App: React.FC = () => {
   const [todo, settodo] = useState("");
+
   const [todos, settodos] = useState<Todo[]>([]);
   const handleAdd = (e: React.FormEvent) => {
     e.preventDefault();
